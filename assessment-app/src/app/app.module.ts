@@ -8,14 +8,17 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { CoursesComponent } from './courses/courses.component';
 import { routing } from './app.routing';
 import { AssessServiceService } from './assess-service.service';
-
+import { AssessmentsComponent } from './assessments/assessments.component';
+import { QuestionsComponent } from './assessments/questions/questions.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
-    CoursesComponent
+    CoursesComponent,
+    AssessmentsComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,6 @@ import { AssessServiceService } from './assess-service.service';
     routing
   ],
   providers: [AssessServiceService],
-  bootstrap: [WelcomeComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
