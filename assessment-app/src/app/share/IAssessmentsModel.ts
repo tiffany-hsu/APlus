@@ -1,12 +1,15 @@
 interface IAssessmentModelAngular{
-    courseId?: number;
+    courseId?: Number;
     assessment: [ {
-        description: string;
+        description: String;
+        total_questions: Number;
+        due_date: String;
+        //assigned_students: IStudentsModel[];
         //questions: IQuestionsModel[];
         options: [String];
-        assessmentId: number;
-        shared: string;
-        status: string;
+        assessmentId: Number;
+        shared: String;
+        //status: string;
     }];
 }
 export default IAssessmentModelAngular;

@@ -19,11 +19,12 @@ class AssessmentModel {
             {
                 courseId: Number,
                 assessments: [ {
-                description: String,
-                options: [String],
-                assessmentId: Number,
-                shared: String,
-                status: String
+                    description: String,
+                    total_questions: Number,
+                    due_date: String,
+                    options: [String],
+                    assessmentId: Number,
+                    shared: String,
                 }]
             }, {collection: 'assessments'}
         );
@@ -33,6 +34,14 @@ class AssessmentModel {
         this.model = mongooseConnection.model<IAssessmentModel>("Assessment", this.schema);
     }
     
+    //see all records in a collection
+    public retrieveAllAssessments(response:any): any {
+        var query = this.model.find({});
+        query.exec( (err, itemArray) => {
+            response.json(itemArray) ;
+        });
+    }
+
     public retrieveAssessmentsDetails(response:any, filter:Object) {
         var query = this.model.findOne(filter);
         query.exec( (err, itemArray) => {

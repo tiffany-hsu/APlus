@@ -50,7 +50,7 @@ coursesCollection.insert(
 }
 )
 
-
+//assessments per course
 db.createCollection('assessments')
 assessmentsCollection = db.getCollection("assessments")
 assessmentsCollection.remove({})
@@ -59,18 +59,22 @@ assessmentsCollection.insert(
 	courseId : 1,
 	assessments : [
 	 {
-	  description: "Are there any questions?",
+	  description: "Spanish Test 1",
+	  total_questions: 4,
+	  due_date: "10-04-2017",
 	  options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
 	  assessmentId: 1,
 	  shared: "N",
-	  status: "I"
+	  
 	 },
 	 {
-	  description: "Slower Please.",
+	  description: "Spanish Test 2",
+	  total_questions: 9,
+	  due_date: "11-3-2017",
 	  options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
 	  assessmentId: 2,
 	  shared: "N",
-	  status: "I"
+	  
 	 }
 	]
 }
@@ -80,18 +84,20 @@ assessmentsCollection.insert(
 	courseId : 2,
 	assessments : [
 	 {
-	  description: "Translate 11",
+	  description: "Tagalog Quiz",
+	  total_questions: 6,
+	  due_date: "02-13-2018",
 	  options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
 	  assessmentId: 1,
 	  shared: "N",
-	  status: "I"
 	 },
 	 {
-	  description: "Translate 22",
+	  description: "Tagalog Pop Quiz",
+	  total_questions: 4,
+	  due_date: "03-01-2018",
 	  options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
 	  assessmentId: 2,
 	  shared: "N",
-	  status: "I"
 	 }
 	]	
 }
@@ -101,20 +107,45 @@ assessmentsCollection.insert(
 	courseId : 3,
 	assessments : [
 	 {
-	  description: "Translate 111",
+	  description: "Translate Vietnamese 111",
+	  total_questions: 9,
+	  due_date: "04-15-2018",
 	  options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
 	  assessmentId: 1,
-	  shared: "N",
-	  status: "I"
+	  shared: "N",  
 	 },
 	 {
-	  description: "Translate 222",
+	  description: "Translate Vietnamese 222",
+	  total_questions: 8,
+	  due_date: "05-28-2018",
 	  options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
-
 	  assessmentId: 2,
 	  shared: "N",
-	  status: "I"
 	 },
 	]	
 }
 )
+
+/*
+assessmentsCollection.insert(
+	{
+		courseId : 3,
+		assessments : [
+		 {
+		  description: "Translate Vietnamese 111",
+		  total_questions: 9,
+		  options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
+		  assessmentId: 1,
+		  shared: "N",  
+		 },
+		 {
+		  description: "Translate Vietnamese 222",
+		  total_questions: 8,
+		  options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
+		  assessmentId: 2,
+		  shared: "N",
+		 },
+		]	
+	}
+	)	
+	*/	

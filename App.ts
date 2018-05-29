@@ -70,6 +70,11 @@ class App {
         this.Courses.retrieveAllCourses(res);
     });
 
+    router.get('/app/assessments/', (req, res) => {
+        console.log('Query All assessments');
+        this.Assessments.retrieveAllAssessments(res);
+    });
+
     this.expressApp.use('/', router);
 
     this.expressApp.use('/app/json/', express.static(__dirname+'/app/json'));

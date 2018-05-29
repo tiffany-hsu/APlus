@@ -14,8 +14,9 @@ var CourseModel = /** @class */ (function () {
             name: String,
             description: String,
             courseId: Number,
-            due: String,
-            state: String,
+            //students: IStudentsModel[];
+            total_assessments: Number,
+            total_students: Number,
             owner: String
         }, { collection: 'courses' });
     };

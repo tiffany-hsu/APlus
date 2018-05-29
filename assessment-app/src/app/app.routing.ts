@@ -14,7 +14,8 @@ const routes: Routes = [
     { path: 'welcome', component: WelcomeComponent},
     { path: 'courses', component: CoursesComponent },
     { path: 'courses/:id', component: CourseComponent },
-    { path: 'questions', component: QuestionsComponent}
+    { path: 'questions', component: QuestionsComponent},
+    { path: 'assessments', component: AssessmentsComponent}
 
     /*{ path: 'list', component: ListsComponent },
     { path: 'list/:id', component: ListComponent}*/

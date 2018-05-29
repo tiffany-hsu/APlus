@@ -10,13 +10,14 @@
                 <th scope="col">Privacy</th>
               </tr>
             </thead>
-            <tbody *ngFor = "let result of Assessments; let i = index">
+            <tbody *ngFor = "let result of Assessments">
               <tr>
-                <th scope="row">{{ result.assessmentId }}</th>
-                <td><a href="#"> {{ result.description }}</a></td>
-                <td> {{ result.shared }} </td>
-                <td> {{ result.status }} </td>
-              </tr>
+                <td scope="row">{{ result.assessmentId }}</td>
+                <td scope="row"><a href="#"> {{ result.description }}</a></td>
+                <td scope="row">{{result.due_date}}</td>
+                <td scope="row">{{result.total_questions}}</td>
+                <td scope="row"> {{ result.shared }} </td>
+              </tr> 
               
             </tbody>
           </table>
