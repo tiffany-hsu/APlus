@@ -1,4 +1,5 @@
-db = db.getSiblingDB('toDoSample')
+// Create User DB soon.........................
+/*db = db.getSiblingDB('toDoSample')
 db.createCollection('users')
 usersCollection = db.getCollection("users")
 usersCollection.remove({})
@@ -7,12 +8,12 @@ usersCollection.insert(
 	  name: "Spanish 101",
 	  description: "Section 1 Spanish Course",
 	  courseId: 1,
-	  due: "04-27-2015",
+	  total_assessments: "2",
 	  state: "A",
 	  owner: "samM"
 }
 )
-
+*/
 
 db = db.getSiblingDB('toDoSample')
 db.createCollection('courses')
@@ -23,7 +24,7 @@ coursesCollection.insert(
 	  name: "Spanish 101",
 	  description: "Section 1 Spanish Course",
 	  courseId: 1,
-	  due: "04-27-2015",
+	  total_assessments: "2",
 	  state: "A",
 	  owner: "samM"
 }
@@ -33,7 +34,7 @@ coursesCollection.insert(
 	  name: "Tagalog 101",
 	  description: "Section 1 Tagalog Course",
 	  courseId: 2,
-	  due: "05-27-2015",
+	  total_assessments: "2",
 	  state: "A",
 	  owner: "samM"
 }
@@ -43,7 +44,7 @@ coursesCollection.insert(
 	  name: "Vietnamese 101",
 	  description: "Section 1 Vietnamese Course",
 	  courseId: 3,
-	  due: "08-27-2015",
+	  total_assessments: "2",
 	  state: "A",
 	  owner: "samM"
 }

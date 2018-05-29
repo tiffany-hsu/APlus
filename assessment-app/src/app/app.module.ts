@@ -7,10 +7,9 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CoursesComponent } from './courses/courses.component';
 import { routing } from './app.routing';
-import { AssessServiceService } from './assess-service.service';
+import { CourseServiceService } from './course-service.service';
 import { AssessmentsComponent } from './assessments/assessments.component';
 import { QuestionsComponent } from './assessments/questions/questions.component';
-import { CourseListComponent } from './courses/course-list/course-list.component';
 
 
 @NgModule({
@@ -20,7 +19,6 @@ import { CourseListComponent } from './courses/course-list/course-list.component
     CoursesComponent,
     AssessmentsComponent,
     QuestionsComponent,
-    CourseListComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +26,7 @@ import { CourseListComponent } from './courses/course-list/course-list.component
     HttpModule,
     routing
   ],
-  providers: [AssessServiceService],
+  providers: [CourseServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

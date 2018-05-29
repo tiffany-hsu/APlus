@@ -2,7 +2,7 @@ interface ICourseModelAngular {
     name: String,
     description: String,
     courseId: Number,
-    due: String,
+    total_assessments: Number,
     state: String,
     owner: String
 }

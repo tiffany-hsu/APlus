@@ -9,9 +9,16 @@
           <th scope="col">Date Created</th>
           <th scope="col">Privacy</th>
         </tr>
-        </thead>
-      </table>
-    <div *ngFor="let result of Courses; let i = index">
-      <app-course-list [Course]="result" [index] = "i"></app-course-list>
-    </div>
+    </thead>
+      <div *ngFor= "let result of Courses">
+          <tbody style="font-size:10pt;">
+              <tr>
+                <td> {{result.courseId}}</td>
+                <td> {{result.name}}</td>
+                <td> {{result.total_assessments}}</td>
+              </tr>
+          </tbody>
+          </div>
+    </table>
+      <!--<app-course-list></app-course-list> -->
 </div>  

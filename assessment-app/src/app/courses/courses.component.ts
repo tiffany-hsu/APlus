@@ -1,4 +1,4 @@
-import { AssessServiceService } from './../assess-service.service';
+import { CourseServiceService } from './../course-service.service';
 import { Component, OnInit } from '@angular/core';
 import ICourseModelAngular from '../share/ICoursesModel';
 
@@ -9,14 +9,10 @@ import ICourseModelAngular from '../share/ICoursesModel';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-  Courses: any;
+  Courses: ICourseModelAngular[];
 
-  constructor(private service$: AssessServiceService) { 
-    this.getCourses();
-  }
-
-  getCourses(){
-    this.Courses = this.service$.getListsIndex()
+  constructor(private service$: CourseServiceService) { 
+    service$.getCourses()
     .subscribe (
       result => this.Courses = result,
       () => {},
