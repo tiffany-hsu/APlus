@@ -1,17 +1,41 @@
 
 <div class="container">
   <div>
-
     <tbody>
             <tr>
             <th scope="row">{{index+1}}</th>
-            <td><a [routerLink] = "['/courses/', index+1]">{{course.name}}</a></td>
-            <td> {{ course.total_assessments }}</td>
-            <td> {{ course.total_students }}</td>
+            <td scope="row"><a [routerLink] = "['/courses/', index+1]">{{course.name}}</a></td>
+            <td scope="row"> {{ course.total_assessments }}</td>
+            <td scope="row"> {{ course.total_students }}</td>
             </tr>
     </tbody>
-  
   </div>
   
 </div>
 
+<!--
+<div class="container">
+    <div id="courseList">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Total Assessments</th>
+                <th scope="col">Total Students</th>
+              </tr>
+            </thead>
+            <tbody *ngFor = "let result of Courses">
+              <tr>
+                <th scope="row">{{ result.courseId }}</th>
+                <td><a [routerLink]="['/courses/:id']"> {{ result.name }}</a></td>
+                <td> 1</td>
+                <td> 1</td>
+              </tr>
+              
+            </tbody>
+          </table>
+      </div>
+  </div>
+  
+-->

@@ -3,8 +3,10 @@
         <tbody>
             <tr>
                 <th scope="row">{{ i+1 }}</th>
-                <td><a [routerLink]="['/questions']">{{result.options}}</a></td>
-                <td>{{result.description}}<span class="badge">{{result.shared}}</span></td>
+                <td><a [routerLink]="['/questions']">{{result.description}}</a></td>
+                <td>{{result.total_questions}}</td>
+                <td>110</td>
+
                 <td>
                     <div class="input-group">
                         <span class="input-group-addon" style="border-style:none;">
