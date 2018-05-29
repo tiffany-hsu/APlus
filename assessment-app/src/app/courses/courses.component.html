@@ -1,23 +1,12 @@
 <div id="courseList" >
     <h3>My Courses</h3>
     <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Total Assessments</th>
-            <th scope="col">Date Created</th>
-            <th scope="col">Privacy</th>
-          </tr>
-        </thead>
         <tbody id="courses">
           <tr>
-            <td>1</td>
-            <td>Spanish 101</td>
-            <td>3</td>
-            <td>04/27/2018</td>
-            <td>Private</td>
-
+            
+            <div>
+              <app-course-list [Course]="result">  </app-course-list>
+            </div>
           </tr>
         </tbody>
     

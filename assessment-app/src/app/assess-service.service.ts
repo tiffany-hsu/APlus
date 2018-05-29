@@ -5,12 +5,13 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
+
 export class AssessServiceService {
 
   constructor(private http: Http) { }
 
   getListsIndex() {
-    return this.http.get( 'http://localhost:8080/json/courses.json')
+    return this.http.get( 'http://localhost:8080/app/courses')
     .map(response => response.json());
   }
   getItems(index: string) {
@@ -18,6 +19,8 @@ export class AssessServiceService {
     .map(response => response.json());
   }
 }
+
+
 
 /*
 import { Injectable } from '@angular/core';
