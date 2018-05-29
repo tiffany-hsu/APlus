@@ -54,6 +54,10 @@ var App = /** @class */ (function () {
             console.log('Query All courses');
             _this.Courses.retrieveAllCourses(res);
         });
+        router.get('/app/assessments/', function (req, res) {
+            console.log('Query All assessments');
+            _this.Assessments.retrieveAllAssessments(res);
+        });
         this.expressApp.use('/', router);
         this.expressApp.use('/app/json/', express.static(__dirname + '/app/json'));
         this.expressApp.use('/images', express.static(__dirname + '/img'));

@@ -14,15 +14,23 @@ var AssessmentModel = /** @class */ (function () {
             courseId: Number,
             assessments: [{
                     description: String,
+                    total_questions: Number,
+                    due_date: String,
                     options: [String],
                     assessmentId: Number,
-                    shared: String,
-                    status: String
+                    shared: String
                 }]
         }, { collection: 'assessments' });
     };
     AssessmentModel.prototype.createModel = function () {
         this.model = mongooseConnection.model("Assessment", this.schema);
+    };
+    //see all records in a collection
+    AssessmentModel.prototype.retrieveAllAssessments = function (response) {
+        var query = this.model.find({});
+        query.exec(function (err, itemArray) {
+            response.json(itemArray);
+        });
     };
     AssessmentModel.prototype.retrieveAssessmentsDetails = function (response, filter) {
         var query = this.model.findOne(filter);

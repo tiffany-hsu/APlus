@@ -4,8 +4,9 @@ interface ICourseModel extends Mongoose.Document {
     name: string;
     description: string;
     courseId: number;
-    due: string;
-    state: string;
-    owner: string;
+    //students: IStudentsModel[];
+    total_assessments: number,
+    total_students: number,
+    owner: string
 }
 export {ICourseModel};
