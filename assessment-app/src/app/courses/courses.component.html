@@ -6,8 +6,8 @@
           <th scope="col">#</th>
           <th scope="col">Name</th>
           <th scope="col">Total Assessments</th>
-          <th scope="col">Date Created</th>
-          <th scope="col">Privacy</th>
+          <th scope="col">Total Students</th>
+          <!--<th scope="col">Privacy</th>-->
         </tr>
     </thead>
       <div *ngFor= "let result of Courses">
@@ -16,9 +16,9 @@
                 <td> {{result.courseId}}</td>
                 <td> {{result.name}}</td>
                 <td> {{result.total_assessments}}</td>
+                <td> {{result.total_students}}</td>
               </tr>
           </tbody>
           </div>
     </table>
-      <!--<app-course-list></app-course-list> -->
 </div>  

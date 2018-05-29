@@ -24,8 +24,8 @@ coursesCollection.insert(
 	  name: "Spanish 101",
 	  description: "Section 1 Spanish Course",
 	  courseId: 1,
-	  total_assessments: "2",
-	  state: "A",
+	  total_assessments: 2,
+	  total_students: 21,
 	  owner: "samM"
 }
 )
@@ -34,8 +34,8 @@ coursesCollection.insert(
 	  name: "Tagalog 101",
 	  description: "Section 1 Tagalog Course",
 	  courseId: 2,
-	  total_assessments: "2",
-	  state: "A",
+	  total_assessments: 2,
+	  total_students: 23,
 	  owner: "samM"
 }
 )
@@ -45,7 +45,7 @@ coursesCollection.insert(
 	  description: "Section 1 Vietnamese Course",
 	  courseId: 3,
 	  total_assessments: "2",
-	  state: "A",
+	  total_students: 19,
 	  owner: "samM"
 }
 )
