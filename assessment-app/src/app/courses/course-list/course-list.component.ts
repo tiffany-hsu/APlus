@@ -8,6 +8,7 @@ import ICourseModelAngular from '../../share/ICoursesModel';
 })
 export class CourseListComponent implements OnInit {
   @Input() Course: ICourseModelAngular;
+  @Input() index: number;
 
   constructor() { }
 

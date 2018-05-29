@@ -1,5 +1,4 @@
 interface ICourseModelAngular {
-    id: Number,
     name: String,
     description: String,
     courseId: Number,

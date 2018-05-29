@@ -1,15 +1,8 @@
 <table class="table">
-    <thead class="thead-dark">
+    <tbody style="font-size:10pt;">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
-        <th scope="col">Total Assessments</th>
-        <th scope="col">Date Created</th>
-        <th scope="col">Privacy</th>
+        <td> <span>{{Course[index].courseId}}</span></td>
+        <td> <span>{{Course[index].name}}</span></td>
       </tr>
-  </thead>
-       
+    </tbody>
 </table>
-<div *ngFor="let result of Course; let i = index">
-    <app-course [aCourse]="result" [index] = "i"></app-course>
- </div>
