@@ -1,27 +1,29 @@
 <div class="container">
-    <div id="courseList">
-        <table class="table">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Total Assessments</th>
-                <th scope="col">Total Students</th>
-              </tr>
-            </thead>
-            <div *ngFor = "let result of courses; let i = index">
-              <courses-table [course]="result" [index]="i"></courses-table>
-            </div>
-            
-          </table>
-      </div>
+       <div *ngFor = "let result of assessments; let i = index">
+        <tbody>
+            <tr>
+                <th scope="row">{{ i+1 }}</th>
+                <td>{{result.options}}</td>
+                <td>{{result.description}}<span class="badge">{{result.shared}}</span></td>
+                <td>
+                    <div class="input-group">
+                        <span class="input-group-addon" style="border-style:none;">
+                        <input type="checkbox">
+                        </span>
+                    </div>  
+                </td>
+            </tr>
+        </tbody> 
+       </div>
+        
+       
+    
+    </div>
+    
   
-  </div>
-  
-  
+    <!--
 
-
-<!-- <div class="container">
+        <div class="container">
   <div id="courseList">
       <table class="table">
           <thead class="thead-dark">
@@ -43,12 +45,7 @@
           </tbody>
         </table>
     </div>
-
 </div>
-!-->
 
 
-
-
-  
-  
+    -->

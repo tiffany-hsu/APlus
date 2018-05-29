@@ -10,6 +10,9 @@ import { routing } from './app.routing';
 import { CourseServiceService } from './course-service.service';
 import { AssessmentsComponent } from './assessments/assessments.component';
 import { QuestionsComponent } from './assessments/questions/questions.component';
+import { CoursesTableComponent } from './courses/courses-table/courses-table.component';
+import { CourseComponent } from './course/course.component';
+import { AssessmentsTableComponent } from './course/assessments-table/assessments-table.component';
 
 
 @NgModule({
@@ -19,6 +22,9 @@ import { QuestionsComponent } from './assessments/questions/questions.component'
     CoursesComponent,
     AssessmentsComponent,
     QuestionsComponent,
+    CoursesTableComponent,
+    CourseComponent,
+    AssessmentsTableComponent,
   ],
   imports: [
     BrowserModule,

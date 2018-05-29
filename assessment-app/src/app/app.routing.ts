@@ -1,3 +1,4 @@
+import { CourseComponent } from './course/course.component';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CoursesComponent } from './courses/courses.component';
@@ -11,7 +12,7 @@ const routes: Routes = [
     { path: '', component: WelcomeComponent },
     { path: 'welcome', component: WelcomeComponent},
     { path: 'courses', component: CoursesComponent },
-    { path: 'courses/:id', component: AssessmentsComponent }
+    { path: 'courses/:id', component: CourseComponent }
     /*{ path: 'list', component: ListsComponent },
     { path: 'list/:id', component: ListComponent}*/
 ];

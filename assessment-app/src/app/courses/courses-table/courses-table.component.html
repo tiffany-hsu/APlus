@@ -1,0 +1,17 @@
+
+<div class="container">
+  <div>
+    <table class="table">
+    <tbody>
+            <tr>
+            <th scope="row">{{index+1}}</th>
+            <td><a [routerLink] = "['/courses/', index+1]">{{course.name}}</a></td>
+            <td> {{ course.total_assessments }}</td>
+            <td> {{ course.total_students }}</td>
+            </tr>
+    </tbody>
+  </table>
+  </div>
+  
+</div>
+
