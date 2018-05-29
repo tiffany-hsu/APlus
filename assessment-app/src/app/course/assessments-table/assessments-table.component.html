@@ -3,7 +3,7 @@
         <tbody>
             <tr>
                 <th scope="row">{{ i+1 }}</th>
-                <td>{{result.options}}</td>
+                <td><a [routerLink]="['/questions']">{{result.options}}</a></td>
                 <td>{{result.description}}<span class="badge">{{result.shared}}</span></td>
                 <td>
                     <div class="input-group">
@@ -15,12 +15,11 @@
             </tr>
         </tbody> 
        </div>
-        
-       
-    
     </div>
     
   
+
+
     <!--
 
         <div class="container">
