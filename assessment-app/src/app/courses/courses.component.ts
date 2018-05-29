@@ -9,7 +9,7 @@ import ICourseModelAngular from '../share/ICoursesModel';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-  Courses;
+  Courses: any;
 
   constructor(private service$: AssessServiceService) { 
     this.getCourses();

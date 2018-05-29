@@ -10,6 +10,6 @@
   </thead>
        
 </table>
-<div *ngFor="let result of Course">
-        <app-course [aCourse]="result"></app-course>
-      </div>
+<div *ngFor="let result of Course; let i = index">
+    <app-course [aCourse]="result" [index] = "i"></app-course>
+ </div>

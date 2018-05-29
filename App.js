@@ -28,12 +28,12 @@ var App = /** @class */ (function () {
     App.prototype.routes = function () {
         var _this = this;
         var router = express.Router();
-        router.get('/app/course/:courseId/count', function (req, res) {
+        router.get('/app/courses/:courseId/count', function (req, res) {
             var id = req.params.courseId;
             console.log('Query single course with id: ' + id);
             _this.Assessments.retrieveAssessmentsCount(res, { courseId: id });
         });
-        router.post('/app/course/', function (req, res) {
+        router.post('/app/courses/', function (req, res) {
             console.log(req.body);
             var jsonObj = req.body;
             jsonObj.courseId = _this.idGenerator;
@@ -45,12 +45,12 @@ var App = /** @class */ (function () {
             res.send(_this.idGenerator.toString());
             _this.idGenerator++;
         });
-        router.get('/app/course/:courseId', function (req, res) {
+        router.get('/app/courses/:courseId', function (req, res) {
             var id = req.params.courseId;
             console.log('Query single list with id: ' + id);
             _this.Assessments.retrieveAssessmentsDetails(res, { courseId: id });
         });
-        router.get('/app/course/', function (req, res) {
+        router.get('/app/courses/', function (req, res) {
             console.log('Query All courses');
             _this.Courses.retrieveAllCourses(res);
         });

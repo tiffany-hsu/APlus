@@ -7,9 +7,8 @@ import ICourseModelAngular from '../../share/ICoursesModel';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit {
-
-
   @Input() Course: ICourseModelAngular;
+
   constructor() { }
 
   ngOnInit() {

@@ -40,13 +40,13 @@ class App {
   // Configure API endpoints.
   private routes(): void {
     let router = express.Router();
-    router.get('/app/course/:courseId/count', (req, res) => {
+    router.get('/app/courses/:courseId/count', (req, res) => {
         var id = req.params.courseId;
         console.log('Query single course with id: ' + id);
         this.Assessments.retrieveAssessmentsCount(res, {courseId: id});
     });
 
-    router.post('/app/course/', (req, res) => {
+    router.post('/app/courses/', (req, res) => {
         console.log(req.body);
         var jsonObj = req.body;
         jsonObj.courseId = this.idGenerator;
@@ -59,13 +59,13 @@ class App {
         this.idGenerator++;
     });
 
-    router.get('/app/course/:courseId', (req, res) => {
+    router.get('/app/courses/:courseId', (req, res) => {
         var id = req.params.courseId;
         console.log('Query single list with id: ' + id);
         this.Assessments.retrieveAssessmentsDetails(res, {courseId: id});
     });
 
-    router.get('/app/course/', (req, res) => {
+    router.get('/app/courses/', (req, res) => {
         console.log('Query All courses');
         this.Courses.retrieveAllCourses(res);
     });
