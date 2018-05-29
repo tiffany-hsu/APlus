@@ -1,5 +1,18 @@
 
 
+body {
+
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", 
+				"Lucida Sans", Tahoma, sans-serif;	
+
+}
+
+#homeImageSize
+{
+    width: 100%;
+    height: 50%;
+}
+
 .images
 {
 	max-width: 100%;
@@ -18,3 +31,7 @@
     border: 1px solid grey;
 }
 
+.title
+{
+    text-align: center;
+}

@@ -1,3 +1,26 @@
-<p>
-  assessments works!
-</p>
+<div class="container">
+    <div id="courseAssessmentsList">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Total Questions</th>
+                <th scope="col">Privacy</th>
+              </tr>
+            </thead>
+            <tbody *ngFor = "let result of Assessments; let i = index">
+              <tr>
+                <th scope="row">{{ result.assessmentId }}</th>
+                <td><a href="#"> {{ result.description }}</a></td>
+                <td> {{ result.shared }} </td>
+                <td> {{ result.status }} </td>
+              </tr>
+              
+            </tbody>
+          </table>
+      </div>
+
+</div>
+

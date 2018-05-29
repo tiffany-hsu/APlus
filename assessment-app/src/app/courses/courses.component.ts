@@ -1,3 +1,5 @@
+
+
 import { CourseServiceService } from './../course-service.service';
 import { Component, OnInit } from '@angular/core';
 import ICourseModelAngular from '../share/ICoursesModel';
@@ -18,7 +20,6 @@ export class CoursesComponent implements OnInit {
       () => {},
       () => console.log('REST call:' + this.Courses)
     );
-
   }
 
   ngOnInit() {
