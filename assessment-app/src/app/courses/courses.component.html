@@ -9,7 +9,7 @@
                 <th scope="col">Total Students</th>
               </tr>
             </thead>
-            <div *ngFor = "let result of courses; let i = index">
+            <div class="container" *ngFor = "let result of courses; let i = index">
               <courses-table [course]="result" [index]="i"></courses-table>
             </div>
             
