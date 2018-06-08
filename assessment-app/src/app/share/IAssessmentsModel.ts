@@ -6,7 +6,7 @@ interface IAssessmentModelAngular{
         due_date: String;
         //assigned_students: IStudentsModel[];
         //questions: IQuestionsModel[];
-        options: [String];
+        //options: [String];
         assessmentId: Number;
         shared: String;
         //status: string;

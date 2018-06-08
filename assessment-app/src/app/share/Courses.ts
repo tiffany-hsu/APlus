@@ -1,4 +1,4 @@
-export class Courses {
+export class Course {
     name: string;
     description: string;
     courseId: string; //changed from id

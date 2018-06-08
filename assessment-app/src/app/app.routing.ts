@@ -1,10 +1,10 @@
 import { QuestionsComponent } from './assessments/questions/questions.component';
-import { CourseComponent } from './course/course.component';
+import { CourseComponent } from './courses/course/course.component';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AssessmentsComponent } from './assessments/assessments.component';
-
+import { AssessmentComponent } from './assessments/assessment/assessment.component';
 /*import { ListsComponent } from './lists/lists.component';
 import { ListComponent } from './list/list.component';
 */
@@ -15,7 +15,8 @@ const routes: Routes = [
     { path: 'courses', component: CoursesComponent },
     { path: 'courses/:id', component: CourseComponent },
     { path: 'questions', component: QuestionsComponent},
-    { path: 'assessments', component: AssessmentsComponent}
+    { path: 'assessments', component: AssessmentsComponent},
+    { path: 'assessments/:id', component: AssessmentComponent}
 
     /*{ path: 'list', component: ListsComponent },
     { path: 'list/:id', component: ListComponent}*/

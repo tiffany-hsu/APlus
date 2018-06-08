@@ -1,0 +1,52 @@
+<div class="container">
+       <div *ngFor = "let result of assessments; let i = index">
+        <tbody>
+            <tr>
+                <th scope="row">{{ i+1 }}</th>
+                <td><a [routerLink]="['/questions']">{{result.description}}</a></td>
+                <td>{{result.total_questions}}</td>
+                <td>110</td>
+
+                <td>
+                    <div class="input-group">
+                        <span class="input-group-addon" style="border-style:none;">
+                        <input type="checkbox">
+                        </span>
+                    </div>  
+                </td>
+            </tr>
+        </tbody> 
+       </div>
+    </div>
+    
+  
+
+
+    <!--
+
+        <div class="container">
+  <div id="courseList">
+      <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Total Assessments</th>
+              <th scope="col">Total Students</th>
+            </tr>
+          </thead>
+          <tbody *ngFor = "let result of Courses">
+            <tr>
+              <th scope="row">{{ result.courseId }}</th>
+              <td><a [routerLink]="['/courses/:id']"> {{ result.name }}</a></td>
+              <td> {{ result.total_assessments }}</td>
+              <td> {{ result.total_students }}</td>
+            </tr>
+            
+          </tbody>
+        </table>
+    </div>
+</div>
+
+
+    -->

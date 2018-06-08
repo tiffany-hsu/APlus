@@ -11,8 +11,9 @@ import { CourseServiceService } from './course-service.service';
 import { AssessmentsComponent } from './assessments/assessments.component';
 import { QuestionsComponent } from './assessments/questions/questions.component';
 import { CoursesTableComponent } from './courses/courses-table/courses-table.component';
-import { CourseComponent } from './course/course.component';
-import { AssessmentsTableComponent } from './course/assessments-table/assessments-table.component';
+import { CourseComponent } from './courses/course/course.component';
+import { AssessmentsTableComponent } from './assessments/assessments-table/assessments-table.component';
+import { AssessmentComponent } from './assessments/assessment/assessment.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { AssessmentsTableComponent } from './course/assessments-table/assessment
     CoursesTableComponent,
     CourseComponent,
     AssessmentsTableComponent,
+    AssessmentComponent,
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,7 @@ export default class Assessment {
     assessments: [{
         description: string;
         total_questions: number;
-        options: [String];
+        //options: [String];
         id: string;
         shared: string;
         due_date: string;
