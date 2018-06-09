@@ -3,7 +3,7 @@ export default class Question {
     question: [ {
         questionTitle: String;
         description?: String;
-        questionID: Number;
+        questionId: Number;
         //options: [String];
     }];
 }

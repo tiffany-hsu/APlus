@@ -3,7 +3,7 @@ interface IQuestionModelAngular{
     question: [ {
         questionTitle: String;
         description?: String;
-        questionID: Number;
+        questionId: Number;
         //options: [String];
     }];
 }
