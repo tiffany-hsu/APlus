@@ -17,12 +17,13 @@ class AssessmentModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
+                teacherId: Number,
                 courseId: Number,
                 assessments: [ {
                     description: String,
                     total_questions: Number,
                     due_date: String,
-                    options: [String],
+                    //options: [String],
                     assessmentId: Number,
                     shared: String,
                 }]
@@ -41,7 +42,8 @@ class AssessmentModel {
             response.json(itemArray) ;
         });
     }
-
+    
+    //retrieve one assessment's details
     public retrieveAssessmentsDetails(response:any, filter:Object) {
         var query = this.model.findOne(filter);
         query.exec( (err, itemArray) => {

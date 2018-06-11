@@ -17,6 +17,7 @@ class CourseModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
+                teacherId: Number,
                 name: String,
                 description: String,
                 courseId: Number,
@@ -37,6 +38,14 @@ class CourseModel {
         var query = this.model.find({});
         query.exec( (err, itemArray) => {
             response.json(itemArray) ;
+        });
+    }
+
+    //retrieve single course's details
+    public retrieveCoursesDetails(response:any, filter:Object) {
+        var query = this.model.findOne(filter);
+        query.exec( (err, itemArray) => {
+            response.json(itemArray);
         });
     }
 }

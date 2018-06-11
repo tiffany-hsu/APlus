@@ -11,6 +11,7 @@ var CourseModel = /** @class */ (function () {
     }
     CourseModel.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
+            teacherId: Number,
             name: String,
             description: String,
             courseId: Number,
@@ -26,6 +27,13 @@ var CourseModel = /** @class */ (function () {
     //see all records in a collection
     CourseModel.prototype.retrieveAllCourses = function (response) {
         var query = this.model.find({});
+        query.exec(function (err, itemArray) {
+            response.json(itemArray);
+        });
+    };
+    //retrieve single course's details
+    CourseModel.prototype.retrieveCoursesDetails = function (response, filter) {
+        var query = this.model.findOne(filter);
         query.exec(function (err, itemArray) {
             response.json(itemArray);
         });

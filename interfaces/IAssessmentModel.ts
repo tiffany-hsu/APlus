@@ -1,6 +1,7 @@
 import Mongoose = require("mongoose");
 
 interface IAssessmentModel extends Mongoose.Document {
+    teacherId: number;
     courseId: number;
     assessment: [ {
         description: string;

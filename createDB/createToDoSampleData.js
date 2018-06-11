@@ -14,6 +14,25 @@ usersCollection.insert(
 }
 )
 */
+db.createCollection('teachers')
+teachersCollection = db.getCollection("teachers")
+teachersCollection.remove({})
+teachersCollection.insert(
+{
+	teacherId: 1,
+	fname: "Susan",
+	lname: "Johnson",
+	email: "sjohnson@school.com"
+}
+)
+teachersCollection.insert(
+{
+		teacherId: 2,
+		fname: "Bob",
+		lname: "Builder",
+		email: "bbuilder@school2.com"
+}
+)
 
 db = db.getSiblingDB('toDoSample')
 db.createCollection('courses')
@@ -21,6 +40,7 @@ coursesCollection = db.getCollection("courses")
 coursesCollection.remove({})
 coursesCollection.insert(
 {
+	  teacherId: 1,
 	  name: "Spanish 101",
 	  description: "Section 1 Spanish Course",
 	  courseId: 1,
@@ -31,6 +51,7 @@ coursesCollection.insert(
 )
 coursesCollection.insert(
 {
+	  teacherId: 2,
 	  name: "Tagalog 101",
 	  description: "Section 1 Tagalog Course",
 	  courseId: 2,
@@ -41,6 +62,7 @@ coursesCollection.insert(
 )
 coursesCollection.insert(
 {
+	  teacherId: 2,
 	  name: "Vietnamese 101",
 	  description: "Section 1 Vietnamese Course",
 	  courseId: 3,
@@ -56,13 +78,14 @@ assessmentsCollection = db.getCollection("assessments")
 assessmentsCollection.remove({})
 assessmentsCollection.insert(
 {
+	teacherId: 1,
 	courseId : 1,
 	assessments : [
 	 {
 	  description: "Spanish Test 1",
 	  total_questions: 4,
 	  due_date: "10-04-2017",
-	  options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
+	  //options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
 	  assessmentId: 1,
 	  shared: "N",
 	  
@@ -71,7 +94,7 @@ assessmentsCollection.insert(
 	  description: "Spanish Test 2",
 	  total_questions: 9,
 	  due_date: "11-3-2017",
-	  options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
+	  //options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
 	  assessmentId: 2,
 	  shared: "N",
 	  
@@ -81,13 +104,14 @@ assessmentsCollection.insert(
 )
 assessmentsCollection.insert(
 {
+	teacherId: 2,
 	courseId : 2,
 	assessments : [
 	 {
 	  description: "Tagalog Quiz",
 	  total_questions: 6,
 	  due_date: "02-13-2018",
-	  options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
+	  //options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
 	  assessmentId: 1,
 	  shared: "N",
 	 },
@@ -95,7 +119,7 @@ assessmentsCollection.insert(
 	  description: "Tagalog Pop Quiz",
 	  total_questions: 4,
 	  due_date: "03-01-2018",
-	  options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
+	  //options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
 	  assessmentId: 2,
 	  shared: "N",
 	 }
@@ -104,13 +128,14 @@ assessmentsCollection.insert(
 )
 assessmentsCollection.insert(
 {
+	teacherId: 2,
 	courseId : 3,
 	assessments : [
 	 {
 	  description: "Translate Vietnamese 111",
 	  total_questions: 9,
 	  due_date: "04-15-2018",
-	  options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
+	  //options: ["Hay preguntas?","Hoy preguntas?","Hay preguntos?","Hoy preguntos?"],
 	  assessmentId: 1,
 	  shared: "N",  
 	 },
@@ -118,7 +143,7 @@ assessmentsCollection.insert(
 	  description: "Translate Vietnamese 222",
 	  total_questions: 8,
 	  due_date: "05-28-2018",
-	  options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
+	  //options: ["Mos despacio, por favor","Mas despiacio, por favor","Mos despacio, por favor"],
 	  assessmentId: 2,
 	  shared: "N",
 	 },

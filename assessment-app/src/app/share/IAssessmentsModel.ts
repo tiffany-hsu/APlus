@@ -1,4 +1,5 @@
 interface IAssessmentModelAngular{
+    teacherId: Number;
     courseId?: Number;
     assessment: [ {
         description: String;

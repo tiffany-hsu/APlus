@@ -11,12 +11,13 @@ var AssessmentModel = /** @class */ (function () {
     }
     AssessmentModel.prototype.createSchema = function () {
         this.schema = new Mongoose.Schema({
+            teacherId: Number,
             courseId: Number,
             assessments: [{
                     description: String,
                     total_questions: Number,
                     due_date: String,
-                    options: [String],
+                    //options: [String],
                     assessmentId: Number,
                     shared: String
                 }]
@@ -32,6 +33,7 @@ var AssessmentModel = /** @class */ (function () {
             response.json(itemArray);
         });
     };
+    //retrieve one assessment's details
     AssessmentModel.prototype.retrieveAssessmentsDetails = function (response, filter) {
         var query = this.model.findOne(filter);
         query.exec(function (err, itemArray) {
